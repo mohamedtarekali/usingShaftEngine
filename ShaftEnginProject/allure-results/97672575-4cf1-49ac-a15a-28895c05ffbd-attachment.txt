@@ -1,0 +1,27 @@
+################################################################################################################################################
+Detected SHAFT Engine Version: [SHAFT Engine v6.1.20220113]
+################################################################################################################################################
+
+[ReportManager] File Action [GetAbsolutePath] successfully performed. With the following test data [Relative Folder Path: "target/downloadedFiles/"]. @12-03-2022 17:11:17.0873 PM
+[ReportManager] Attempting to run remotely on: [Android], [http://0.0.0.0:4723/wd/hub]. @12-03-2022 17:11:17.0997 PM
+[ReportManager] File Action [GetAbsolutePath] successfully performed. With the following test data [Relative Folder Path: "src/test/resources/colnnStage.apk"]. @12-03-2022 17:11:18.0015 PM
+[ReportManager] Successfully Opened [NativeMobileApp]. @12-03-2022 17:11:38.0045 PM
+
+################################################################################################################################################
+Starting Execution:	[1 out of 1] test cases in the current suite
+Test Method:		[Tests.NewTest.userSuccessfullySelectLanguage]
+################################################################################################################################################
+[ReportManager] File Action [CreateFile] successfully performed. With the following test data [Target Folder: "allure-results//screenshots/20220312-171117", Target File: "\1647097900533_userSuccessfullySelectLanguage.gif"]. @12-03-2022 17:11:41.0721 PM
+[ReportManager] Element Action [Tap] successfully performed. With the following test data [English]. @12-03-2022 17:11:42.0968 PM
+[ReportManager] Element Action [Tap] successfully performed. With the following test data [Confirm]. @12-03-2022 17:11:45.0816 PM
+[ReportManager] Assertion Passed: Then I Assert that the element found by [By.xpath: //android.widget.TextView[@text='Welcome Back']] exists. @12-03-2022 17:11:50.0294 PM
+[ReportManager] Successfully created attachment [Screenshot - 1647097909889_userSuccessfullySelectLanguage_ValidateElementExists_passed] @12-03-2022 17:11:50.0363 PM
+[ReportManager] Assertion [ValidateElementExists] PASSED. Expected [Element Should Exist, locator 'By.xpath: //android.widget.TextView[@text='Welcome Back']'] and Actual [Element Exists]. Comparison Type [EQUALS]. Validation Type [POSITIVE]. @12-03-2022 17:11:50.0363 PM
+[ReportManager] Successfully created attachment [Animated Gif - userSuccessfullySelectLanguage] @12-03-2022 17:11:50.0371 PM
+[ReportManager] Successfully Closed All Drivers. @12-03-2022 17:11:51.0128 PM
+[ReportManager] Successfully created attachment [SHAFT Engine Logs - Execution log] @12-03-2022 17:11:51.0271 PM
+
+################################################################################################################################################
+This test run was powered by SHAFT Engine Version: [SHAFT Engine v6.1.20220113]
+SHAFT Engine is licensed under the MIT License: [https://github.com/MohabMohie/SHAFT_ENGINE/blob/master/LICENSE].
+################################################################################################################################################

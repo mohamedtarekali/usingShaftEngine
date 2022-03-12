@@ -1,0 +1,12 @@
+
+################################################################################################################################################
+Starting Execution:	[1 out of 1] test cases in the current suite
+Test Method:		[Tests.NewTest.userSuccessfullySelectLanguage]
+################################################################################################################################################
+[ReportManager] File Action [CreateFile] successfully performed. With the following test data [Target Folder: "allure-results//screenshots/20220312-171117", Target File: "\1647097900533_userSuccessfullySelectLanguage.gif"]. @12-03-2022 17:11:41.0721 PM
+[ReportManager] Element Action [Tap] successfully performed. With the following test data [English]. @12-03-2022 17:11:42.0968 PM
+[ReportManager] Element Action [Tap] successfully performed. With the following test data [Confirm]. @12-03-2022 17:11:45.0816 PM
+[ReportManager] Assertion Passed: Then I Assert that the element found by [By.xpath: //android.widget.TextView[@text='Welcome Back']] exists. @12-03-2022 17:11:50.0294 PM
+[ReportManager] Successfully created attachment [Screenshot - 1647097909889_userSuccessfullySelectLanguage_ValidateElementExists_passed] @12-03-2022 17:11:50.0363 PM
+[ReportManager] Assertion [ValidateElementExists] PASSED. Expected [Element Should Exist, locator 'By.xpath: //android.widget.TextView[@text='Welcome Back']'] and Actual [Element Exists]. Comparison Type [EQUALS]. Validation Type [POSITIVE]. @12-03-2022 17:11:50.0363 PM
+[ReportManager] Successfully created attachment [Animated Gif - userSuccessfullySelectLanguage] @12-03-2022 17:11:50.0371 PM

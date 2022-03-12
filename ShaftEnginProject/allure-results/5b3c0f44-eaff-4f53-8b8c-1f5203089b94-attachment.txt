@@ -1,0 +1,4 @@
+[ReportManager] File Action [GetAbsolutePath] successfully performed. With the following test data [Relative Folder Path: "target/downloadedFiles/"]. @12-03-2022 17:11:17.0873 PM
+[ReportManager] Attempting to run remotely on: [Android], [http://0.0.0.0:4723/wd/hub]. @12-03-2022 17:11:17.0997 PM
+[ReportManager] File Action [GetAbsolutePath] successfully performed. With the following test data [Relative Folder Path: "src/test/resources/colnnStage.apk"]. @12-03-2022 17:11:18.0015 PM
+[ReportManager] Successfully Opened [NativeMobileApp]. @12-03-2022 17:11:38.0045 PM
