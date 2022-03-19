@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class HomePage {
 	
 	private WebDriver mobile;
-	private By welcomeMessageInHome = By.id("com.colnn.colnn.colnn:id/status");
+	private By welcomeMessageInHome = By.xpath("//android.widget.TextView[@text='Welcome']");
 		
 		public HomePage(WebDriver mobile) {
 			this.mobile=mobile;	
