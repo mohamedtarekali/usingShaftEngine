@@ -6,7 +6,7 @@
 			<class name="Tests.NewTest" />
 		</classes>
 	</test>
-	<test name="parallelTest1">
+	<test name="parallelTest2">
 		<classes>
 			<class name="Tests.NewTest" />
 		</classes>
