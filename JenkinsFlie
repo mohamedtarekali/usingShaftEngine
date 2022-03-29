@@ -26,11 +26,11 @@ pipeline {
          stage("test2"){
             steps
             {
+                sleep 30
                 // Clean before build
                 cleanWs()
                 // We need to explicitly checkout from SCM here
                 checkout scm
-                sleep 30
                 git "https://github.com/mohamedtarekali/usingShaftEngine.git"
                 bat "mvn test -DbrowserStack.deviceName=\"Samsung Galaxy S21\" -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
             }
