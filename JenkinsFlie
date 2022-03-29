@@ -25,14 +25,14 @@ pipeline {
                 bat "mvn test -DbrowserStack.deviceName=\"Samsung Galaxy S21\" -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
             }
            }
-
-            }
-             script {
+ script {
             allure([
                    
                     results: [[path: 'ShaftEnginProject/allure-results']]
             ])
     }
+            }
+            
         }
           
     }
