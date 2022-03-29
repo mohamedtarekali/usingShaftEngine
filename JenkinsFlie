@@ -32,7 +32,7 @@ pipeline {
                 script {
             allure([
                    
-                    results: [[path: 'ShaftEnginProject/allure-results']]
+                    results: [[path: 'ShaftEnginProject/extent-reports']]
             ])
     }
             }
