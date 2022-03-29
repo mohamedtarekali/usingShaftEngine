@@ -17,7 +17,7 @@ pipeline {
                 script {
             allure([
                    
-                    results: [[path: 'target/allure-results']]
+                    results: [[path: 'ShaftEnginProject/allure-results']]
             ])
     }
             }
@@ -32,7 +32,7 @@ pipeline {
                 script {
             allure([
                    
-                    results: [[path: 'target/allure-results']]
+                    results: [[path: 'ShaftEnginProject/allure-results']]
             ])
     }
             }
