@@ -15,6 +15,15 @@ pipeline {
                 git "https://github.com/mohamedtarekali/usingShaftEngine.git"
                 bat "mvn -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
             }
+            script {
+            allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+            ])
+    }
            }
          stage("test2"){
             steps
@@ -24,8 +33,7 @@ pipeline {
                 git "https://github.com/mohamedtarekali/usingShaftEngine.git"
                 bat "mvn test -DbrowserStack.deviceName=\"Samsung Galaxy S21\" -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
             }
-           }
-script {
+            script {
             allure([
                     includeProperties: false,
                     jdk: '',
@@ -34,6 +42,8 @@ script {
                     results: [[path: 'target/allure-results']]
             ])
     }
+           }
+
             }
         }
           
