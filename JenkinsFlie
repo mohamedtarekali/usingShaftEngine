@@ -17,9 +17,7 @@ pipeline {
                 script {
             allure([
                    
-                    zip archive: true, dir: "target/allure-results", glob: '', zipFile: "allure-results.zip"
-                    copyArtifacts filter: 'allure-results.zip', optional: true, projectName: "Regression1", selector: lastCompleted(), target: "Regression1"
-unzip dir: "Regression1", glob: '', zipFile: "Regression1/allure-results.zip"
+                    results: [[path: 'ShaftEnginProject/allure-results']]
             ])
     }
             }
@@ -34,14 +32,12 @@ unzip dir: "Regression1", glob: '', zipFile: "Regression1/allure-results.zip"
                 script {
             allure([
                    
-                     zip archive: true, dir: "target/allure-results", glob: '', zipFile: "allure-results.zip"
-                    copyArtifacts filter: 'allure-results.zip', optional: true, projectName: "Regression2", selector: lastCompleted(), target: "Regression2"
-unzip dir: "Regression2", glob: '', zipFile: "Regression2/allure-results.zip"
+                    results: [[path: 'ShaftEnginProject/allure-results']]
             ])
     }
             }
            }
-             allure serve Regression1 Regression2
+             
             }
         }
           
