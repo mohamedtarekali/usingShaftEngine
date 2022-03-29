@@ -24,16 +24,21 @@ public class NewTest {
 	private WebDriver mobile;
 	private ExcelFileManager excelReader;
 
-	//@Test
-	//public void userSuccessfullySelectLanguage() {
-		//new SelectLanguagePage(mobile).selectLanguage();
-		//Validations.assertThat().element(mobile, new LoginPage(mobile).getWelcomeMessageLocator()).exists().perform();
-	//}
+	@Test
+	public void userSuccessfullySelectLanguage() {
+		new SelectLanguagePage(mobile).selectLanguage();
+		Validations.assertThat().element(mobile, new LoginPage(mobile).getWelcomeMessageLocator()).exists().perform();
+	}
 	
 	@Test
 	public void userSuccessfullyLogin() {
 		new SelectLanguagePage(mobile).selectLanguage().userLogin(excelReader.getCellData("userName") , excelReader.getCellData("password"));
 		Validations.assertThat().element(mobile, new HomePage(mobile).getWelcomeMessageLocator()).exists().perform();
+	}
+	
+	@Test
+	public void dummyTest() {
+		ReportManager.log("dummyTestLogs");
 	}
 
 	@BeforeMethod
