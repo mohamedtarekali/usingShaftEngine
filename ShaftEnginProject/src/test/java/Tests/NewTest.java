@@ -38,7 +38,7 @@ public class NewTest {
 	
 	@Test
 	public void dummyTest() {
-		ReportManager.log("dummyTestLogs");
+		ReportManager.log("dummyTestLogsGoesHere");
 	}
 
 	@BeforeMethod
