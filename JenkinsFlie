@@ -14,8 +14,12 @@ pipeline {
             {
                 git "https://github.com/mohamedtarekali/usingShaftEngine.git"
                 bat "mvn -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
-                publishHTML([reportName  : 'Allure Report', reportDir: 'target/site/allure-maven-plugin', reportFiles: 'index1.html',
-                                     reportTitles: '', allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false])
+                script {
+            allure([
+                   
+                    results: [[path: 'ShaftEnginProject/allure-results']]
+            ])
+    }
             }
            }
          stage("test2"){
@@ -25,8 +29,12 @@ pipeline {
                 
                 git "https://github.com/mohamedtarekali/usingShaftEngine.git"
                 bat "mvn test -DbrowserStack.deviceName=\"Samsung Galaxy S21\" -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
-              publishHTML([reportName  : 'Allure Report', reportDir: 'target/site/allure-maven-plugin', reportFiles: 'index2.html',
-                                     reportTitles: '', allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false])
+                script {
+            allure([
+                   
+                    results: [[path: 'ShaftEnginProject/allure-results']]
+            ])
+    }
             }
            }
              
