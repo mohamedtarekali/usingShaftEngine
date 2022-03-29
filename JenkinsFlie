@@ -3,16 +3,22 @@ pipeline {
      options {
         // This is required if you want to clean before build
         skipDefaultCheckout(true)
-        // Clean before build
-                cleanWs()
-                // We need to explicitly checkout from SCM here
-                checkout scm
+       
     }
     tools
     {
     maven "MAVEN_HOME"
     }
     stages{
+    stage("clean"){
+            steps
+            {
+                // Clean before build
+                cleanWs()
+                // We need to explicitly checkout from SCM here
+                checkout scm
+            }
+           }
         stage('Run Tests') {
             parallel {
 
