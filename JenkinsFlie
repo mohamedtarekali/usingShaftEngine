@@ -16,10 +16,7 @@ pipeline {
                 bat "mvn -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
                 script {
             allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
+                 
                     results: [[path: 'ShaftEnginProject/allure-results']]
             ])
     }
@@ -34,10 +31,7 @@ pipeline {
                 bat "mvn test -DbrowserStack.deviceName=\"Samsung Galaxy S21\" -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
                  script {
             allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
+                   
                     results: [[path: 'ShaftEnginProject/allure-results']]
             ])
     }
