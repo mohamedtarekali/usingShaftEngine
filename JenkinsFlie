@@ -3,7 +3,8 @@ pipeline {				//indicate the job is written in Declarative Pipeline
     stages {
         stage ("build") {		//an arbitrary stage name
             steps {
-                build 'shaftJob'	//this is where we specify which job to invoke.
+               // build 'shaftJob'	//this is where we specify which job to invoke.
+               build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: Google Pixel 4]]
             }
         }
     }
