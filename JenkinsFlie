@@ -1,45 +1,10 @@
-pipeline {
-    agent any
-    tools
-    {
-    maven "MAVEN_HOME"
-    }
-    stages{
-    
-        stage('Run Tests') {
-            parallel {
-
-         stage("test1"){
-            steps
-            {
-                git "https://github.com/mohamedtarekali/usingShaftEngine.git"
-                bat "mvn -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
-                script {
-            allure([
-                   
-                    results: [[path: 'ShaftEnginProject/allure-results']]
-            ])
-    }
-            }
-           }
-         stage("test2"){
-            steps
-            {
-                sleep 45
-                
-                git "https://github.com/mohamedtarekali/usingShaftEngine.git"
-                bat "mvn test -DbrowserStack.deviceName=\"Samsung Galaxy S21\" -Dmaven.test.failure.ignore=true clean package -f ShaftEnginProject/pom.xml"
-                script {
-            allure([
-                   
-                    results: [[path: 'ShaftEnginProject/allure-results']]
-            ])
-    }
-            }
-           }
-             
+pipeline {				//indicate the job is written in Declarative Pipeline
+    agent any				//agent specifies where the pipeline will execute. 
+    stages {
+        stage ("build") {		//an arbitrary stage name
+            steps {
+                build 'shaftJob'	//this is where we specify which job to invoke.
             }
         }
-          
     }
 }
