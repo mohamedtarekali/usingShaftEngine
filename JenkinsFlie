@@ -1,7 +1,11 @@
 pipeline {				//indicate the job is written in Declarative Pipeline
     agent any				//agent specifies where the pipeline will execute. 
     stages {
-        stage ("build") {		//an arbitrary stage name
+    
+        stage('Run Tests') {
+            parallel {
+            
+        stage ("build1") {		//an arbitrary stage name
             steps {
                // build 'shaftJob'	//this is where we specify which job to invoke.
                build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Google Pixel 4']]
@@ -13,6 +17,23 @@ pipeline {				//indicate the job is written in Declarative Pipeline
             ])
                       }
             }
+        }
+        
+           stage ("build2") {		//an arbitrary stage name
+            steps {
+               // build 'shaftJob'	//this is where we specify which job to invoke.
+               build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Samsung Galaxy S21']]
+               //generate allure report
+               script {
+            allure([
+                   
+                    results: [[path: 'ShaftEnginProject/allure-results']]
+            ])
+                      }
+            }
+        }
+        
+        }
         }
     }
 }
