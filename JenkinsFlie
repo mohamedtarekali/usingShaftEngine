@@ -1,5 +1,9 @@
-pipeline {				//indicate the job is written in Declarative Pipeline
-    agent any				//agent specifies where the pipeline will execute. 
+pipeline {				        //indicate the job is written in Declarative Pipeline
+    agent any				    //agent specifies where the pipeline will execute. 
+    tools
+    {
+    maven "MAVEN_HOME"
+    }
     stages {
     
         stage('Run Tests') {
@@ -7,9 +11,9 @@ pipeline {				//indicate the job is written in Declarative Pipeline
             
         stage ("build1") {		//an arbitrary stage name
             steps {
-               // build 'shaftJob'	//this is where we specify which job to invoke.
+                                //this is where we specify which job to invoke.
                build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Google Pixel 4']]
-               //generate allure report
+                                //generate allure report
                script {
             allure([
                    
@@ -21,9 +25,9 @@ pipeline {				//indicate the job is written in Declarative Pipeline
         
            stage ("build2") {		//an arbitrary stage name
             steps {
-               // build 'shaftJob'	//this is where we specify which job to invoke.
+                                    //this is where we specify which job to invoke.
                build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Samsung Galaxy S21']]
-               //generate allure report
+                                    //generate allure report
                script {
             allure([
                    
