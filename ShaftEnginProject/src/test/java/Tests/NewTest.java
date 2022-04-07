@@ -39,7 +39,6 @@ public class NewTest {
 		Validations.assertThat().element(mobile, new HomePage(mobile).getWelcomeMessageLocator()).exists().perform();
 	}
 	
-
 	@BeforeMethod
 	public void beforeMethod() {
 		//mobile = DriverFactory.getDriver();

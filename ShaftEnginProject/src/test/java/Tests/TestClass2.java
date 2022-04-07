@@ -29,6 +29,7 @@ public class TestClass2 {
 		.click(By.id("com.colnn.colnn.colnn:id/tv_publish_date"))
 		.click(By.xpath("//android.view.View[@checked='true']//following-sibling::android.view.View[1]"))
 		.click(By.id("android:id/button1"));
+		
 	}
 	
 	@BeforeMethod
