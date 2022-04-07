@@ -57,9 +57,7 @@
 						-Dtestng.dtd.http=true
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar"
 					</argLine>
-					<suiteXmlFiles>
-							<suiteXmlFile></suiteXmlFile>
-						</suiteXmlFiles>
+					<!-- xml suite goes here -->
 					<properties>
 						<property>
 							<name>usedefaultlisteners</name>
