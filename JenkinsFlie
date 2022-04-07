@@ -14,12 +14,6 @@ pipeline {				        //indicate the job is written in Declarative Pipeline
                                 //this is where we specify which job to invoke.
                build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Google Pixel 4']]
                                 //generate allure report
-               script {
-            allure([
-                   
-                    results: [[path: 'ShaftEnginProject/allure-results']]
-            ])
-                      }
             }
         }
         
@@ -28,12 +22,6 @@ pipeline {				        //indicate the job is written in Declarative Pipeline
                                     //this is where we specify which job to invoke.
                build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Samsung Galaxy S21']]
                                     //generate allure report
-               script {
-            allure([
-                   
-                    results: [[path: 'ShaftEnginProject/allure-results']]
-            ])
-                      }
             }
         }
         
