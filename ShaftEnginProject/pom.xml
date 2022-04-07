@@ -58,7 +58,7 @@
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar"
 					</argLine>
 					<suiteXmlFiles>
-							<suiteXmlFile>Regression.xml</suiteXmlFile>
+							<suiteXmlFile></suiteXmlFile>
 						</suiteXmlFiles>
 					<properties>
 						<property>
