@@ -12,16 +12,16 @@ pipeline {				        //indicate the job is written in Declarative Pipeline
         stage ("build1") {		//an arbitrary stage name
             steps {
                                 //this is where we specify which job to invoke.
-               build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Google Pixel 4']]
-                                //generate allure report
+               build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Google Pixel 4'],[$class: 'StringParameterValue', name: 'tests', value: 'Tests.NewTest']]
+                                
             }
         }
         
            stage ("build2") {		//an arbitrary stage name
             steps {
                                     //this is where we specify which job to invoke.
-               build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Samsung Galaxy S21']]
-                                    //generate allure report
+               build job: 'shaftJob', parameters: [[$class: 'StringParameterValue', name: 'deviceName', value: 'Samsung Galaxy S21'],[$class: 'StringParameterValue', name: 'tests', value: 'Tests.TestClass2,Tests.NewTest']]
+                                    
             }
         }
         
