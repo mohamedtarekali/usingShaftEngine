@@ -10,7 +10,10 @@ import org.testng.annotations.Test;
 import com.shaft.driver.DriverFactory;
 import com.shaft.gui.element.ElementActions;
 import com.shaft.tools.io.ExcelFileManager;
+import com.shaft.validation.Validations;
 
+import Pages.HomePage;
+import Pages.LibraryPage;
 import Pages.SelectLanguagePage;
 
 public class TestClass2 {
@@ -25,6 +28,8 @@ public class TestClass2 {
 		.openLibraryPage()
 		.openAddEditLibraryPage()
 		.userAddLibrary();
+		
+		Validations.assertThat().element(mobile, new LibraryPage(mobile).getLibraryTitleForAsserion()).exists().perform();
 	}
 	
 	@BeforeMethod
