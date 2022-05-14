@@ -18,24 +18,19 @@ public class TestClass2 {
 	private ExcelFileManager excelReader;
 	
 	@Test
-	public void userCanAddLibrary() {
-		new SelectLanguagePage(mobile).selectLanguage().userLogin(excelReader.getCellData("userName") , excelReader.getCellData("password"));
-		(new ElementActions(mobile)).click(By.xpath("//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.ImageView[1]"))
-		.click(By.xpath("//android.widget.TextView[@text='Library']")).click(By.id("com.colnn.colnn.colnn:id/add_files_tv"))
-		.click(By.id("com.colnn.colnn.colnn:id/choose_image_bt")).click(By.id("com.android.permissioncontroller:id/permission_allow_button"))
-		.click(By.id("com.colnn.colnn.colnn:id/choose_image_bt"))
-		.click(By.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]//android.widget.FrameLayout[1]//android.widget.ImageView[1]"))
-		.click(By.xpath("//android.widget.TextView[lower-case(@text)='select']"))
-		.click(By.id("com.colnn.colnn.colnn:id/tv_publish_date"))
-		.click(By.xpath("//android.view.View[@checked='true']//following-sibling::android.view.View[1]"))
-		.click(By.id("android:id/button1"));
-		
+	public void userCanSuccessfullyAddLibrary() {
+		new SelectLanguagePage(mobile).selectLanguage()
+		.userLogin(excelReader.getCellData("userName") , excelReader.getCellData("password"))
+		.navigateToMyClassroom()
+		.openLibraryPage()
+		.openAddEditLibraryPage()
+		.userAddLibrary();
 	}
 	
 	@BeforeMethod
 	public void beforeMethod() {
-		//mobile = DriverFactory.getDriver();
-		mobile = DriverFactory.getBrowserStackDriver();
+		mobile = DriverFactory.getDriver();
+		//mobile = DriverFactory.getBrowserStackDriver();
 	}
 
 	@AfterMethod
